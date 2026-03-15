@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurs</title>
+  </head>
+  <body>
+    <h2>Kurs mata Uang (1 USD = ?)</h2>
+    <ul>
+      {% for mata, nilai in rates.items() %}
+      <li>{{ mata }}:{{ "%.2f"|format(nilai)}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
