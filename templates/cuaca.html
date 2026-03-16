@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Aplikasi Cuaca</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        background: linear-gradient(to right, #74ebd5, #1236d8);
+        padding-top: 100px;
+      }
+
+      .card {
+        background: white;
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      input {
+        padding: 10px;
+        width: 80%;
+        border-radius: 10px;
+      }
+
+      button {
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2>Cek Cuaca</h2>
+
+      <form method="POST">
+        <input type="text" name="kota" placeholder="Masukkan kota" />
+
+        <br />
+
+        <button type="submit">Cek Cuaca</button>
+      </form>
+
+      {% if kota %}
+
+      <h3>Cuaca di {{ kota }}</h3>
+
+      <p>Suhu : {{ suhu }} °C</p>
+
+      <p>Kondisi : {{ deskripsi }}</p>
+
+      {% endif %}
+    </div>
+  </body>
+</html>
